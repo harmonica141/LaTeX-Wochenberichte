@@ -1,0 +1,40 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[babel, german=quotes]{csquotes}
+
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{helvet}
+\usepackage{lmodern}
+
+\usepackage[a4paper, left=3cm, right=1.5cm, top=3cm, bottom=2cm]{geometry}
+
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\def\vMonday{~}
+\def\vYearNumber{~}
+\def\vReportNumber{~}
+\def\vOrganization{~}
+\def\vDepartment{~}
+
+
+\lhead{\textbf{\@author}\\Ausbildungsjahr \vYearNumber/3}
+\chead{\textbf{Ausbildungsnachweis Nr. \@vReportNumber}\\für die Woche vom bis}
+\rhead{Ausbildungsbereich EDV}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\newcommand{\monday}[1]{\def\vMonday{#1}}
+\newcommand{\yearNumber}[1]{\def\vYearNumber{#1}}
+\newcommand{\reportNumber}[1]{\def\vReportNumber{#1}}
+\newcommand{\organization}[1]{\def\vOrganization{#1}}
+\newcommand{\department}[1]{\def\vDepartment{#1}}
