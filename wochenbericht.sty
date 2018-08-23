@@ -7,7 +7,7 @@
 \usepackage{helvet}
 \usepackage{lmodern}
 
-\usepackage[a4paper, left=3cm, right=1.5cm, top=3cm, bottom=2cm]{geometry}
+\usepackage[a4paper, left=2.5cm, right=1.5cm, top=2.5cm, bottom=2cm]{geometry}
 
 \usepackage{url}
 \usepackage{verbatim}
@@ -17,24 +17,18 @@
 \usepackage{amssymb}
 
 \usepackage{fancyhdr}
+\usepackage{advdate}
 \pagestyle{fancy}
 
-\def\vMonday{~}
-\def\vYearNumber{~}
-\def\vReportNumber{~}
-\def\vOrganization{~}
-\def\vDepartment{~}
-
-
-\lhead{\textbf{\@author}\\Ausbildungsjahr \vYearNumber/3}
-\chead{\textbf{Ausbildungsnachweis Nr. \@vReportNumber}\\für die Woche vom bis}
-\rhead{Ausbildungsbereich EDV}
-\lfoot{}
-\cfoot{}
-\rfoot{}
-
-\newcommand{\monday}[1]{\def\vMonday{#1}}
-\newcommand{\yearNumber}[1]{\def\vYearNumber{#1}}
+\newcommand{\weekDates}[2]{\def\vMonday{#1}\def\vFriday{#2}}
+\newcommand{\schoolYear}[1]{\def\vSchoolYear{#1}}
 \newcommand{\reportNumber}[1]{\def\vReportNumber{#1}}
 \newcommand{\organization}[1]{\def\vOrganization{#1}}
 \newcommand{\department}[1]{\def\vDepartment{#1}}
+
+\lhead{\textbf{\@author}\\Ausbildungsjahr \vSchoolYear/3}
+\chead{\textbf{Ausbildungsnachweis Nr. \vReportNumber}\\für die Woche vom \vMonday bis \vFriday}
+\rhead{\vOrganization\\Ausbildungsbereich:\\\vDepartment}
+\lfoot{}
+\cfoot{}
+\rfoot{}
