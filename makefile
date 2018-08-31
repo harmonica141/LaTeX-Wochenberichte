@@ -4,6 +4,7 @@ PDFFILES = $(TEXFILES:.tex=.pdf)
 all: pdf
 # use for windows clients:
 	gswin64c -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile="out.pdf" $(PDFFILES)
+	latexmk -c
 # use for linux clients:
 # gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile="out.pdf" $(PDFFILES)
 # use for MacOS clients:
