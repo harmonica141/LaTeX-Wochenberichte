@@ -1,4 +1,4 @@
-TEXFILES = $(wildcard *.tex)
+TEXFILES = $(sort $(wildcard *.tex))
 PDFFILES = $(TEXFILES:.tex=.pdf)
 
 all: pdf
@@ -13,7 +13,7 @@ pdf: $(PDFFILES)
 
 %.pdf: %.tex
 	@latexmk -pdf  -pdflatex=pdflatex $<
-	@latexmk -c
+
 clean:
 	@latexmk -c
 
